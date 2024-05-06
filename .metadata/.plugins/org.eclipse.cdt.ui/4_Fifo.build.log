@@ -1,0 +1,24 @@
+13:57:01 **** Build of configuration Debug for project 4_Fifo ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/esp82xx_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/esp82xx_driver.d" -MT"Src/esp82xx_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/esp82xx_driver.o"
+arm-none-eabi-gcc "../Src/fifo.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/fifo.d" -MT"Src/fifo.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/fifo.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/4_Fifo/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "4_Fifo.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Israel\Documents\Embedded-STM32-WIFI-Course\4_Fifo\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_Fifo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_Fifo.elf
+ 
+arm-none-eabi-objdump -h -S  4_Fifo.elf  > "4_Fifo.list"
+arm-none-eabi-objcopy  -O binary  4_Fifo.elf  "4_Fifo.bin"
+arm-none-eabi-size   4_Fifo.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6168	    108	   4460	  10736	   29f0	4_Fifo.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_Fifo.bin
+ 
+Finished building: 4_Fifo.list
+ 
+
+13:57:03 Build Finished. 0 errors, 0 warnings. (took 1s.401ms)
+

@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include "stm32f4xx.h"
+#include "esp82xx_driver.h"
+#include "circular_buffer.h"
+#include "esp82xx_lib.h"
+
+
+
+int main()
+{
+
+	/*Initialize debug uart*/
+   debug_uart_init();
+   esp_uart_init();
+
+    /*Initialize circular buffer*/
+   circular_buffer_init();
+
+   /*Send string*/
+
+ esp82xx_reset();
+ esp82xx_startup_test();
+ esp82xx_sta_mode();
+
+
+
+	while(1)
+	{
+	}
+
+}
+

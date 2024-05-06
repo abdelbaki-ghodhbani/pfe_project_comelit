@@ -1,0 +1,25 @@
+13:57:59 **** Build of configuration Debug for project 5_circular_buffer ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/circular_buffer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/circular_buffer.d" -MT"Src/circular_buffer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/circular_buffer.o"
+arm-none-eabi-gcc "../Src/esp82xx_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/esp82xx_driver.d" -MT"Src/esp82xx_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/esp82xx_driver.o"
+arm-none-eabi-gcc "../Src/fifo.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/fifo.d" -MT"Src/fifo.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/fifo.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Include" -I"C:/Users/Israel/Documents/Embedded-STM32-WIFI-Course/5_circular_buffer/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "5_circular_buffer.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Israel\Documents\Embedded-STM32-WIFI-Course\5_circular_buffer\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_circular_buffer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_circular_buffer.elf
+ 
+arm-none-eabi-objdump -h -S  5_circular_buffer.elf  > "5_circular_buffer.list"
+arm-none-eabi-objcopy  -O binary  5_circular_buffer.elf  "5_circular_buffer.bin"
+arm-none-eabi-size   5_circular_buffer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1848	     12	   3668	   5528	   1598	5_circular_buffer.elf
+Finished building: default.size.stdout
+Finished building: 5_circular_buffer.bin
+ 
+Finished building: 5_circular_buffer.list
+ 
+ 
+
+13:58:01 Build Finished. 0 errors, 0 warnings. (took 2s.247ms)
+

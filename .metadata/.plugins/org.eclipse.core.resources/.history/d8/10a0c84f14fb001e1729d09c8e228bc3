@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include "stm32f4xx.h"
+#include "esp82xx_driver.h"
+#include "circular_buffer.h"
+#include "esp82xx_lib.h"
+#include <string.h>
+
+#define SSID_NAME  "TOPNET_7908"
+#define PASSKEY    "0keug9x26c"
+
+int main()
+{
+
+	ESP_Config esp_config;
+	    strcpy(esp_config.ssid, "YourSSID");
+	    strcpy(esp_config.password, "YourPassword");
+	    esp_config.mode = 1; // Set mode to 1 for station mode, adjust as needed
+
+	     esp82xx_reset();
+	     esp82xx_startup_test();
+	     esp82xx_sta_mode(&esp_config);
+	     esp82xx_ap_connect(&esp_config);
+while(1)
+	{
+
+	}
+
+}
+
