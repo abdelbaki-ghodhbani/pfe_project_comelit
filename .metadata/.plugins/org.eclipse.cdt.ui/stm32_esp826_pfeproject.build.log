@@ -1,10 +1,31 @@
-15:43:05 **** Incremental Build of configuration Debug for project stm32_esp826_pfeproject ****
+15:11:36 **** Incremental Build of configuration Debug for project stm32_esp826_pfeproject ****
 make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/circular_buffer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/circular_buffer.d" -MT"Src/circular_buffer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/circular_buffer.o"
+arm-none-eabi-gcc "../Src/esp82xx_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/esp82xx_driver.d" -MT"Src/esp82xx_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/esp82xx_driver.o"
+arm-none-eabi-gcc "../Src/esp82xx_lib.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/esp82xx_lib.d" -MT"Src/esp82xx_lib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/esp82xx_lib.o"
+arm-none-eabi-gcc "../Src/hardware_module.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/hardware_module.d" -MT"Src/hardware_module.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/hardware_module.o"
+../Src/esp82xx_lib.c: In function 'esp82xx_ap_connect':
+../Src/esp82xx_lib.c:257:42: warning: '%s' directive writing up to 47 bytes into a region of size between 20 and 67 [-Wformat-overflow=]
+  257 |          sprintf(data,"AT+CWJAP=\"%s\",\"%s\"\r\n" ,config->ssid, config->password);
+      |                                          ^~
+../Src/esp82xx_lib.c:257:10: note: 'sprintf' output between 17 and 111 bytes into a destination of size 80
+  257 |          sprintf(data,"AT+CWJAP=\"%s\",\"%s\"\r\n" ,config->ssid, config->password);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "stm32_esp826_pfeproject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\A\Desktop\Embedded-STM32-WIFI\stm32_esp826_pfeproject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_esp826_pfeproject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_esp826_pfeproject.elf
+ 
 arm-none-eabi-size  stm32_esp826_pfeproject.elf 
+arm-none-eabi-objdump -h -S stm32_esp826_pfeproject.elf  > "stm32_esp826_pfeproject.list"
    text	   data	    bss	    dec	    hex	filename
   11176	    100	   3996	  15272	   3ba8	stm32_esp826_pfeproject.elf
 Finished building: default.size.stdout
  
+Finished building: stm32_esp826_pfeproject.list
+ 
 
-15:43:05 Build Finished. 0 errors, 0 warnings. (took 490ms)
+15:11:47 Build Finished. 0 errors, 1 warnings. (took 10s.774ms)
 

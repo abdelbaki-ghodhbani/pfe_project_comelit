@@ -1,7 +1,0 @@
-C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
-../Src/esp82xx_driver.c:34:5:__io_putchar	16	static
-../Src/esp82xx_driver.c:40:6:debug_uart_init	8	static
-../Src/esp82xx_driver.c:107:6:esp_uart_init	8	static
-../Src/esp82xx_driver.c:161:6:debug_uart_write	16	static
-../Src/esp82xx_driver.c:171:6:systick_delay_ms	24	static
-../Src/esp82xx_driver.c:193:17:compute_uart_bd	16	static

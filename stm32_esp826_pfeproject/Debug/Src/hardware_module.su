@@ -1,3 +1,0 @@
-../Src/hardware_module.c:4:7:light_int	4	static
-../Src/hardware_module.c:11:7:light_on	4	static
-../Src/hardware_module.c:17:7:light_off	4	static
