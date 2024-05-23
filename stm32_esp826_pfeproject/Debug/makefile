@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := uart_pc_with_struct
+BUILD_ARTIFACT_NAME := stm32_esp826_pfeproject
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-uart_pc_with_struct.elf \
+stm32_esp826_pfeproject.elf \
 
 MAP_FILES += \
-uart_pc_with_struct.map \
+stm32_esp826_pfeproject.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-uart_pc_with_struct.list \
+stm32_esp826_pfeproject.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: uart_pc_with_struct.elf secondary-outputs
+main-build: stm32_esp826_pfeproject.elf secondary-outputs
 
 # Tool invocations
-uart_pc_with_struct.elf uart_pc_with_struct.map: $(OBJS) $(USER_OBJS) C:\Users\A\Desktop\Embedded-STM32-WIFI\uart_pc_with_struct\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "uart_pc_with_struct.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\A\Desktop\Embedded-STM32-WIFI\uart_pc_with_struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="uart_pc_with_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32_esp826_pfeproject.elf stm32_esp826_pfeproject.map: $(OBJS) $(USER_OBJS) C:\Users\A\Desktop\Embedded-STM32-WIFI\stm32_esp826_pfeproject\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32_esp826_pfeproject.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\A\Desktop\Embedded-STM32-WIFI\stm32_esp826_pfeproject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_esp826_pfeproject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-uart_pc_with_struct.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "uart_pc_with_struct.list"
+stm32_esp826_pfeproject.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "stm32_esp826_pfeproject.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout uart_pc_with_struct.elf uart_pc_with_struct.list uart_pc_with_struct.map
+	-$(RM) default.size.stdout stm32_esp826_pfeproject.elf stm32_esp826_pfeproject.list stm32_esp826_pfeproject.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

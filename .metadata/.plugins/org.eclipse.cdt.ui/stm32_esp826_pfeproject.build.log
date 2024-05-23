@@ -1,0 +1,10 @@
+15:43:05 **** Incremental Build of configuration Debug for project stm32_esp826_pfeproject ****
+make -j4 all 
+arm-none-eabi-size  stm32_esp826_pfeproject.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11176	    100	   3996	  15272	   3ba8	stm32_esp826_pfeproject.elf
+Finished building: default.size.stdout
+ 
+
+15:43:05 Build Finished. 0 errors, 0 warnings. (took 490ms)
+

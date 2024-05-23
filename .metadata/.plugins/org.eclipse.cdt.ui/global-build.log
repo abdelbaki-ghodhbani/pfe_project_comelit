@@ -1,28 +1,28 @@
-15:47:22 **** Incremental Build of configuration Debug for project uart_pc_with_struct ****
+15:42:51 **** Incremental Build of configuration Debug for project stm32_esp826_pfeproject ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/esp82xx_lib.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F401RETx -DSTM32F4 -DSTM32F401xE -c -I../Inc -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Include" -I"C:/Users/A/Desktop/Embedded-STM32-WIFI/F4_chip_headers/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/esp82xx_lib.d" -MT"Src/esp82xx_lib.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/esp82xx_lib.o"
 ../Src/esp82xx_lib.c: In function 'esp82xx_ap_connect':
-../Src/esp82xx_lib.c:308:42: warning: '%s' directive writing up to 47 bytes into a region of size between 20 and 67 [-Wformat-overflow=]
-  308 |          sprintf(data,"AT+CWJAP=\"%s\",\"%s\"\r\n" ,config->ssid, config->password);
+../Src/esp82xx_lib.c:257:42: warning: '%s' directive writing up to 47 bytes into a region of size between 20 and 67 [-Wformat-overflow=]
+  257 |          sprintf(data,"AT+CWJAP=\"%s\",\"%s\"\r\n" ,config->ssid, config->password);
       |                                          ^~
-../Src/esp82xx_lib.c:308:10: note: 'sprintf' output between 17 and 111 bytes into a destination of size 80
-  308 |          sprintf(data,"AT+CWJAP=\"%s\",\"%s\"\r\n" ,config->ssid, config->password);
+../Src/esp82xx_lib.c:257:10: note: 'sprintf' output between 17 and 111 bytes into a destination of size 80
+  257 |          sprintf(data,"AT+CWJAP=\"%s\",\"%s\"\r\n" ,config->ssid, config->password);
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "uart_pc_with_struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\A\Desktop\Embedded-STM32-WIFI\uart_pc_with_struct\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="uart_pc_with_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: uart_pc_with_struct.elf
+arm-none-eabi-gcc -o "stm32_esp826_pfeproject.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\A\Desktop\Embedded-STM32-WIFI\stm32_esp826_pfeproject\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_esp826_pfeproject.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_esp826_pfeproject.elf
  
-arm-none-eabi-size  uart_pc_with_struct.elf 
-arm-none-eabi-objdump -h -S uart_pc_with_struct.elf  > "uart_pc_with_struct.list"
+arm-none-eabi-size  stm32_esp826_pfeproject.elf 
+arm-none-eabi-objdump -h -S stm32_esp826_pfeproject.elf  > "stm32_esp826_pfeproject.list"
    text	   data	    bss	    dec	    hex	filename
-  12100	    100	   3996	  16196	   3f44	uart_pc_with_struct.elf
+  11176	    100	   3996	  15272	   3ba8	stm32_esp826_pfeproject.elf
 Finished building: default.size.stdout
  
-Finished building: uart_pc_with_struct.list
+Finished building: stm32_esp826_pfeproject.list
  
-15:47:38 **** Incremental Build of configuration Debug for project uart_pc_with_struct ****
+15:43:05 **** Incremental Build of configuration Debug for project stm32_esp826_pfeproject ****
 make -j4 all 
-arm-none-eabi-size  uart_pc_with_struct.elf 
+arm-none-eabi-size  stm32_esp826_pfeproject.elf 
    text	   data	    bss	    dec	    hex	filename
-  12100	    100	   3996	  16196	   3f44	uart_pc_with_struct.elf
+  11176	    100	   3996	  15272	   3ba8	stm32_esp826_pfeproject.elf
 Finished building: default.size.stdout
  
