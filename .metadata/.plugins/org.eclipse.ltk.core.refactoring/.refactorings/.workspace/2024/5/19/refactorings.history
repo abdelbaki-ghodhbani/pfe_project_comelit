@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;uart_pc_with_struct&apos; to &apos;stm32_esp826_pfeproject&apos;" description="Rename resource &apos;uart_pc_with_struct&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/uart_pc_with_struct" name="stm32_esp826_pfeproject" stamp="1715007089442" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;uart_pc&apos;" deleteContents="false" description="Delete resource &apos;uart_pc&apos;" element1="/uart_pc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1715007156320"/>
-</session>
