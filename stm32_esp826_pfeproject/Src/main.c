@@ -26,12 +26,13 @@ int main()
 	    strcpy(esp_config.ssid, SSID_NAME);
 	    strcpy(esp_config.password, PASSKEY);
 	    esp_config.mode = 1; // Set mode to 1 for station mode, adjust as needed
+	    /*Initialize server*/
 
 	    esp82xx_sever_init(&esp_config);
 
 while(1)
 	{
-
+	/*Activate server*/
 	server_begin();
 	}
 
