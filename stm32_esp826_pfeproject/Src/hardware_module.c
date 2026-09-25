@@ -3,8 +3,8 @@
 
 // function to initialize the hardware module for controlling the light
 	void light_int(void){
-	//enable clock access to the PA port
-	RCC->AHB2ENR  |=GPIOA_EN;
+	//enable clock access to the PA port (GPIOA is on the AHB1 bus on STM32F4)
+	RCC->AHB1ENR  |=GPIOA_EN;
 	// set pin pa5 to output
 	GPIOA -> MODER |=  (1U<<10);
 	GPIOA -> MODER &=~(1U<<11);

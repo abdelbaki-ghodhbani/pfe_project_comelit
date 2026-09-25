@@ -273,7 +273,7 @@ void esp82xx_sever_init(ESP_Config *config) {
 
   static void esp82xx_ap_connect(ESP_Config *config)
    {
-  	 char data[80];
+  	 char data[112];   /* large enough for AT+CWJAP with 47-char SSID and password */
 
   	 /*Clear esp uart buffer*/
   	 buffer_clear(esp82xx_port);
