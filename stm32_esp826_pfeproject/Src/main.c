@@ -6,8 +6,8 @@
 #include "esp82xx_lib.h"
 #include "hardware_module.h"
 
-#define SSID_NAME  "Cred_Intern"
-#define PASSKEY    "cred@2024+"
+#define SSID_NAME  "YOUR_WIFI_SSID"
+#define PASSKEY    "YOUR_WIFI_PASSWORD"
 
 int main()
 {
